@@ -1,0 +1,3 @@
+/home/waifu/projects/roshambo/build/CMakeFiles/MyCppExecutable.dir
+/home/waifu/projects/roshambo/build/CMakeFiles/edit_cache.dir
+/home/waifu/projects/roshambo/build/CMakeFiles/rebuild_cache.dir

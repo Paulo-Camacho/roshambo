@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/waifu/projects/roshambo/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/MyCppExecutable.dir/main.cpp.o -c /home/waifu/projects/roshambo/main.cpp",
+  "file": "/home/waifu/projects/roshambo/main.cpp",
+  "output": "CMakeFiles/MyCppExecutable.dir/main.cpp.o"
+}
+]

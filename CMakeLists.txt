@@ -1,31 +1,37 @@
-# Minimum CMake version required
-cmake_minimum_required(VERSION 3.20)
+# Specify the minimum version of CMake required
+cmake_minimum_required(VERSION 3.16)
 
-# Project name and version
-project(MyCppProject VERSION 1.0)
-
-# Specify the C++ standard
+# Project name and C++ standard
+project(EXECUTABLE LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Enable warnings (optional but recommended)
-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    add_compile_options(-Wall -Wextra -pedantic)
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-    add_compile_options(/W4)
+# Set GCC as the compiler (optional)
+if(NOT CMAKE_CXX_COMPILER)
+    set(CMAKE_CXX_COMPILER g++)
 endif()
 
-# Add the executable
-add_executable(MyCppExecutable main.cpp)
+# Include directories
+include_directories(include)
 
-# Set output directory for the executable
-set_target_properties(MyCppExecutable PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
-)
+# Find SFML
+find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 
-# Find SFML package
-find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+# Add the executable target
+add_executable(EXECUTABLE src/main.cpp)
 
 # Link SFML libraries
-target_link_libraries(MyCppExecutable PRIVATE sfml-system sfml-window sfml-graphics)
+target_link_libraries(EXECUTABLE sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 
+# Copy assets directory to the build directory
+add_custom_command(
+    TARGET EXECUTABLE POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:EXECUTABLE>/assets
+)
+
+# Optional: Enable more compiler warnings
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    target_compile_options(EXECUTABLE PRIVATE -Wall -Wextra -pedantic)
+endif()

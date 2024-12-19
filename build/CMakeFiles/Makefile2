@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/waifu/projects/roshambo/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MyCppExecutable.dir/all
+all: CMakeFiles/EXECUTABLE.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MyCppExecutable.dir/clean
+clean: CMakeFiles/EXECUTABLE.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MyCppExecutable.dir
+# Target rules for target CMakeFiles/EXECUTABLE.dir
 
 # All Build rule for target.
-CMakeFiles/MyCppExecutable.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCppExecutable.dir/build.make CMakeFiles/MyCppExecutable.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCppExecutable.dir/build.make CMakeFiles/MyCppExecutable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/waifu/projects/roshambo/build/CMakeFiles --progress-num=1,2 "Built target MyCppExecutable"
-.PHONY : CMakeFiles/MyCppExecutable.dir/all
+CMakeFiles/EXECUTABLE.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXECUTABLE.dir/build.make CMakeFiles/EXECUTABLE.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXECUTABLE.dir/build.make CMakeFiles/EXECUTABLE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/waifu/projects/roshambo/build/CMakeFiles --progress-num=1,2 "Built target EXECUTABLE"
+.PHONY : CMakeFiles/EXECUTABLE.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MyCppExecutable.dir/rule: cmake_check_build_system
+CMakeFiles/EXECUTABLE.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/waifu/projects/roshambo/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyCppExecutable.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/EXECUTABLE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/waifu/projects/roshambo/build/CMakeFiles 0
-.PHONY : CMakeFiles/MyCppExecutable.dir/rule
+.PHONY : CMakeFiles/EXECUTABLE.dir/rule
 
 # Convenience name for target.
-MyCppExecutable: CMakeFiles/MyCppExecutable.dir/rule
-.PHONY : MyCppExecutable
+EXECUTABLE: CMakeFiles/EXECUTABLE.dir/rule
+.PHONY : EXECUTABLE
 
 # clean rule for target.
-CMakeFiles/MyCppExecutable.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCppExecutable.dir/build.make CMakeFiles/MyCppExecutable.dir/clean
-.PHONY : CMakeFiles/MyCppExecutable.dir/clean
+CMakeFiles/EXECUTABLE.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EXECUTABLE.dir/build.make CMakeFiles/EXECUTABLE.dir/clean
+.PHONY : CMakeFiles/EXECUTABLE.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

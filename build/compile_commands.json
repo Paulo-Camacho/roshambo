@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/waifu/projects/roshambo/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++20 -Wall -Wextra -pedantic -o CMakeFiles/MyCppExecutable.dir/main.cpp.o -c /home/waifu/projects/roshambo/main.cpp",
-  "file": "/home/waifu/projects/roshambo/main.cpp",
-  "output": "CMakeFiles/MyCppExecutable.dir/main.cpp.o"
+  "command": "/usr/bin/g++  -I/home/waifu/projects/roshambo/include -g -std=c++20 -Wall -Wextra -pedantic -o CMakeFiles/EXECUTABLE.dir/src/main.cpp.o -c /home/waifu/projects/roshambo/src/main.cpp",
+  "file": "/home/waifu/projects/roshambo/src/main.cpp",
+  "output": "CMakeFiles/EXECUTABLE.dir/src/main.cpp.o"
 }
 ]
